@@ -5,7 +5,15 @@
 
     <script>
         //Initialize the SDK
-        SalesforceInteractions.init(); 
+        SalesforceInteractions.init();({
+        	consentes: [{
+        		peovider: 'ju',
+        		purpose: 'Tracking',
+        		statuts: SalesforceInteractions.ConsentStatus.OptIn
+        	}]
+        }).then(()=>{
+        	console.log('init successful');
+        });
         
         // Set the logging level for debugging purposes
         SalesforceInteractions.setLoggingLevel(4); 
