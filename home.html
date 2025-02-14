@@ -5,13 +5,13 @@
 
     <script>
         //Initialize the SDK
-        SalesforceInteractions.init();({
-        	consentes: [{
+        SalesforceInteractions.init({
+        	consents: [{
         		provider: 'OneTrust',
         		purpose: 'Tracking',
         		status: SalesforceInteractions.ConsentStatus.OptIn
         	}]
-        }).then(()=>{
+        }).then(() => {
         	console.log('init successful');
         });
         

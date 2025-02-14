@@ -5,18 +5,15 @@
 
     <script>
         //Initialize the SDK
-        SalesforceInteractions.init();({
-        	consentes: [{
+        SalesforceInteractions.init({
+        	consents: [{
         		provider: 'OneTrust',
         		purpose: 'Tracking',
         		status: SalesforceInteractions.ConsentStatus.OptIn
         	}]
-        }).then(()=>{
+        }).then(() => {
         	console.log('init successful');
         });
-        
-        // Set the logging level for debugging purposes
-        SalesforceInteractions.setLoggingLevel(4); 
     </script>
     
     <meta charset="UTF-8">
