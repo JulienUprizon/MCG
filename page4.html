@@ -14,7 +14,15 @@
         }).then(() => {
         	console.log('init successful');
         });
-        
+        SalesforceInteractions.sendEvent({
+		    interaction: {
+   				name: 'Page4',
+        		catalogObject: {
+            		type: 'Product',
+            		id: this.selectedProduct.Id,
+        			}
+    		}
+		});
     </script>
     
     <meta charset="UTF-8">
